@@ -1,13 +1,21 @@
 use std::fmt::{self, Formatter, Display};
 
-pub struct Stack{}
+pub struct Stack{
+    xs: Vec<i32>
+}
 
 impl Stack {
-    pub fn push(&self, n: i32) {
+    pub fn new() -> Stack {
+        let xs = Vec::new();
+        Stack{xs: xs}
     }
 
-    pub fn pop(&self) -> i32 {
-        3
+    pub fn push(&mut self, n: i32) {
+        self.xs.push(n)
+    }
+
+    pub fn pop(&mut self) -> Option<i32> {
+        self.xs.pop()
     }
 }
 
@@ -16,12 +24,3 @@ impl Display for Stack {
         write!(f, "Struct")
     }
 }
-
-pub fn add_two(a: i32) -> i32 {
-    internal_adder(a, 2)
-}
-
-fn internal_adder(a: i32, b: i32) -> i32 {
-    a + b
-}
-

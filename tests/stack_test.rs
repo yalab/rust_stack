@@ -1,13 +1,17 @@
 use rust_stack::stack::*;
 
 #[test]
-fn it_adds_two() {
-    assert_eq!(4, add_two(2));
+fn stack_test() {
+    let mut stack = Stack::new();
+    stack.push(1);
+    stack.push(3);
+    match stack.pop() {
+        Some(n) => assert_eq!(3, n),
+        None    => panic!()
+    }
+    match stack.pop() {
+        Some(n) => assert_eq!(1, n),
+        None    => panic!()
+    }
 }
 
-#[test]
-fn stack_test() {
-    let stack = Stack{};
-    stack.push(3);
-    assert_eq!(3, stack.pop());
-}
