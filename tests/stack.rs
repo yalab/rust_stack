@@ -1,6 +1,6 @@
-use rust_stack;
+use rust_stack::*;
 
 #[test]
 fn it_adds_two() {
-    assert_eq!(4, rust_stack::add_two(2));
+    assert_eq!(4, add_two(2));
 }
