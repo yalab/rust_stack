@@ -1,4 +1,4 @@
-use rust_stack::*;
+use rust_stack::stack::*;
 
 #[test]
 fn it_adds_two() {
