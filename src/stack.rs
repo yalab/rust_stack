@@ -10,8 +10,9 @@ impl Stack {
         Stack{xs: xs}
     }
 
-    pub fn push(&mut self, n: i32) {
-        self.xs.push(n)
+    pub fn push(&mut self, n: i32) -> i32 {
+        self.xs.push(n);
+        n
     }
 
     pub fn pop(&mut self) -> Option<i32> {
